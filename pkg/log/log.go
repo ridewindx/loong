@@ -17,5 +17,7 @@ func initLog() error {
 
 	logrus.SetOutput(os.Stdout)
 
+	logrus.AddHook(ContextHook{})
+
 	return nil
 }
